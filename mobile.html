@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobiles</title>
+    <link rel="icon" href="sv.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="appliance.css">
+  </head>
+  <body>
+   
+    <header>
+        <a href="index.html">
+            <img src="sv.jpg" alt="Image description" style="width: 90px !important; height: 65px !important;">
+          </a>
+          <h1>Mobiles</h1>
+          <label for="category">Select a category:</label>
+          <select id="category">
+              <option value="all">All</option>
+              <option value="Samsung">Samsung</option>
+              <option value="Apple">Apple</option>
+              <option value="OnePlus">OnePlus</option>
+              <option value="Xiaomi">Xiaomi</option>
+              <option value="Realme">Realme</option>
+          </select>
+      </header>
+      <nav>
+          <ul>
+              <li><a href="index.html"><i class="fas fa-home fa-fw fa-lg fa-circle"></i> Home</a></li>
+              <li><a href="largeappl.html" onclick="showProducts()"><i class="fas fa-tv fa-fw fa-lg fa-circle"></i> Large Appliances </a></li>
+              <li><a href="kitapp.html"><i class="fas fa-utensils fa-fw fa-lg fa-circle"></i> Kitchen Appliances</a></li>
+              <li><a href="" onclick="showProducts()"><i class="fas fa-shopping-cart fa-fw fa-lg fa-circle"></i> cart </a></li>  
+            </ul>
+      </nav>
+      <main>
+        <section class="Samsung">
+            <img src="sa1.jpg" alt="Samsung Galaxy S21">
+            <h3>Samsung Galaxy S21</h3>
+            <p>₹69,999.99</p>
+            <div>
+              <button id="add-to-cart" type="button">Add to Cart</button>
+              <button type="button" class="buy-now" onclick="redirectToOrderPage('Samsung Galaxy S21', 'sa1.jpg', '69,999')">Buy Now</button>
+            </div>
+          </section>
+      
+          <section class="Samsung">
+            <img src="sa2.jpg" alt="Samsung Galaxy Note 20">
+            <h3>Samsung Galaxy Note 20</h3>
+            <p>₹79,999.99</p>
+            <div>
+              <button id="add-to-cart" type="button">Add to Cart</button>
+              <button type="button" class="buy-now" onclick="redirectToOrderPage('Samsung Galaxy Note 20', 'sa2.jpg', '79,999')">Buy Now</button>
+            </div>
+          </section>
+      
+          <section class="Apple">
+            <img src="a1.jpg" alt="iPhone 12">
+            <h3>iPhone 12</h3>
+            <p>₹79,999.99</p>
+            <div>
+              <button id="add-to-cart" type="button">Add to Cart</button>
+              <button type="button" class="buy-now" onclick="redirectToOrderPage('iPhone 12', 'a1.jpg', '79,999')">Buy Now</button>
+            </div>
+          </section>
+      
+          <section class="Apple">
+            <img src="a2.jpg" alt="iPhone SE">
+            <h3>iPhone SE</h3>
+            <p>₹39,999.99</p>
+            <div>
+              <button id="add-to-cart" type="button">Add to Cart</button>
+              <button type="button" class="buy-now" onclick="redirectToOrderPage('iPhone SE', 'a2.jpg', '39,999')">Buy Now</button>
+            </div>
+          </section>
+      
+          <section class="OnePlus">
+            <img src="o1.jpg" alt="OnePlus 9 Pro">
+            <h3>OnePlus 9 Pro</h3>
+            <p>₹64,999.99</p>
+            <div>
+              <button id="add-to-cart" type="button">Add to Cart</button>
+              <button type="button" class="buy-now" onclick="redirectToOrderPage('OnePlus 9 Pro', 'o1.jpg', '64,999')">Buy Now</button>
+            </div>
+          </section>
+      
+          <section class="OnePlus">
+            <img src="o2.jpg" alt="OnePlus Nord">
+            <h3>OnePlus Nord</h3>
+            <p>₹29,999.99</p>
+            <div>
+              <button id="add-to-cart" type="button">Add to Cart</button>
+              <button type="button" class="buy-now" onclick="redirectToOrderPage('OnePlus Nord', 'o2.jpg', '29,999')">Buy Now</button>
+            </div>
+          </section>
+      
+          <section class="Xiaomi">
+            <img src="x1.jpg" alt="Xiaomi Mi 11">
+            <h3>Xiaomi Mi 11</h3>
+            <p>₹49,999.99</p>
+            <div>
+              <button id="add-to-cart" type="button">Add to Cart</button>
+              <button type="button" class="buy-now" onclick="redirectToOrderPage('Xiaomi Mi 11', 'x1.jpg', '49,999')">Buy Now</button>
+            </div>
+          </section>
+      
+          <section class="Xiaomi">
+            <img src="x2.jpg" alt="Xiaomi Redmi Note 10">
+            <h3>Xiaomi Redmi Note 10</h3>
+            <p>₹14,999.99</p>
+            <div>
+              <button id="add-to-cart" type="button">Add to Cart</button>
+              <button type="button" class="buy-now" onclick="redirectToOrderPage('Xiaomi Redmi Note 10', 'x2.jpg', '14,999')">Buy Now</button>
+            </div>
+          </section>
+      
+          <section class="Realme">
+            <img src="r1.jpg" alt="Realme X7 Pro">
+            <h3>Realme X7 Pro</h3>
+            <p>₹29,999.99</p>
+            <div>
+              <button id="add-to-cart" type="button">Add to Cart</button>
+              <button type="button" class="buy-now" onclick="redirectToOrderPage('Realme X7 Pro', 'r1.jpg', '29,999')">Buy Now</button>
+            </div>
+          </section>
+      
+          <section class="Realme">
+            <img src="r2.jpg" alt="Realme Narzo 30A">
+            <h3>Realme Narzo 30A</h3>
+            <p>₹9,999.99</p>
+            <div>
+              <button id="add-to-cart" type="button">Add to Cart</button>
+              <button type="button" class="buy-now" onclick="redirectToOrderPage('Realme Narzo 30A', 'r2.jpg', '9,999')">Buy Now</button>
+            </div>
+          </section>
+      </main>
+      <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Added viewport meta element -->
+    <link rel="icon" href="sv.jpg" type="image/x-icon">
+    <title>S V Electronics</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+        <div class="brand">
+          <h1><img src="sv.jpg" alt="Store Logo" width="100" title="Welcome to S V Electronics"></h1>
+        </div>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="index.html"><i class="fas fa-home fa-fw fa-lg fa-circle"></i> Home</a></li>
+        <li><a href=""><i class="fas fa-shopping-cart fa-fw fa-lg fa-circle"></i> Cart</a></li>
+        <li class="search-icon" onclick="showSearchBar()"><i class="fas fa-search fa-fw fa-lg fa-circle"></i> Search</a></li>
+        <div class="search-bar" style="display: none;">
+          <input type="text" placeholder="Search for products...">
+          <button type="button" onclick="searchProducts()">Search</button>
+        </div>
+      </ul>
+    </nav>
+    <br>
+    <div class="moving-images">
+      <img src="image2.jpg" alt="Moving Image 2" width="800" height="400">
+      <img src="image3.jpg" alt="Moving Image 2" width="800" height="400">
+      <img src="image4.jpg" alt="Moving Image 2" width="800" height="400">
+    </div>
+    <style>
+      .moving-images {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+      }
+    
+      .moving-images img:first-child {
+        display: block; /* show the first image */
+      }
+    </style>
+    <script>
+      var images = document.querySelectorAll('.moving-images img');
+      var index = `0`;
+      images[index].style.display = 'none'; // hide the current image
+      setInterval(function() {
+        images[index].style.display = 'none'; // hide the current image
+        index = (index + 1) % images.length; // cycle to the next image
+        images[index].style.display = 'block'; // show the next image
+      }, 3000); // change image every 3 seconds
+    </script> 
+    <main>
+      <h2>Featured Products</h2>
+      <ul>
+        <li>
+          <h3>Large Applicances</h3> <br>
+          <img src="largeapp.jpg" alt="Product 1" width="375">
+          <p>TV, Refridgerators, Washing Machines</p> 
+          <a href="largeappl.html"><button type="button">Explore</button></a>
+        </li>
+        <li>
+          <h3>Home appliances</h3><br>
+          <img src="kitapp.jpg" alt="Product 2" width="375">
+          <p>Kitchen appliances</p>
+          <a href="kitapp.html"><button type="button">Explore</button></a>
+        </li>
+        <li>
+          <h3>Mobiles</h3><br> 
+          <img src="mobile.jpg" alt="Product 3" width="375">
+          <p>One Plus,Vivo, Samsung, realme, redmi</p>
+          <a href="mobile.html"><button type="button">Explore</button></a>
+        </li>
+      </ul>
+    </main>
+    <footer>
+      <nav>
+        <ul>
+          <li><a href="#"><button onclick="toggleDetails()">About Us</button></a></li>
+          <li><a href="#"><button onclick="toggleDetails()">Contact Us</button></a></li>
+        </ul>
+      </nav>
+      <p>&copy; 2023 SVE</p>
+    </footer>
+    <script>function showSearchBar() {
+      const searchBar = document.querySelector('.search-bar');
+      searchBar.style.display = 'block';
+    }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,176 @@
+/* Set default font family and size */
+body {
+  font-family: 'Neue Haas Grotesk', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+    font-size: 21px;
+  }
+  body {
+    background-image: url('bi.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  /* Style the header */
+  header {
+
+    color: #c34127;
+    image-resolution: 300px;
+    padding: 3px;
+    border-radius: 5px;
+    background-position: center;
+  
+  }
+  
+  /* Use the San Francisco font for headings */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Neue Haas Grotesk', sans-serif;
+  }
+  img {
+    border-radius: 15px;
+  }
+  .brand {
+    display: flex;
+    align-items: top;
+    justify-content: center;
+    padding-top: 0;
+  }
+   .brand h1 {
+    font-family: 'Neue Haas Grotesk', sans-serif;
+    font-size: 50px;
+    margin: 0;
+  }
+  /* Style the navigation menu */
+  nav {
+    background-color: #595b5a;
+    padding: 0px;
+    border-radius: 5px;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    display: inline-flex;
+    margin-right: 20px;
+  }
+  
+  nav a {
+    color: #e7dddd;
+    text-decoration: none;
+    padding: 15px;
+  }
+  
+  /* Style the main content */
+  main {
+    padding: 15px;
+  }
+  
+  main h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  main ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  main li {
+    display: inline-block;
+    margin-right: 10px;
+    vertical-align: top;
+    width: 30%;
+  }
+  
+  main h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  main img {
+    display: block;
+    margin-bottom: 5px;
+    max-width: 100%;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  main img:hover {
+    transform: scale(1.1);
+  }
+  
+  main p {
+    margin-bottom: 10px;
+    color: #666;
+  }
+  
+  main button {
+    background-color: #aab5ba;
+    border: none;
+    color: #333;
+    padding: 10px 10px;
+    border-radius: 3px;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    cursor: pointer;
+  }
+  
+  main button:hover {
+    background-color: #fff;
+    background-width: ;
+    color: #333;
+    border-radius: 5px;
+  }
+
+  .search-icon {
+    cursor: pointer;
+    color: #ececec;
+  }
+  .search-bar {
+    width: 1250px;
+    height: 50px;
+    background-color: #595b5a;
+    padding: 10px;
+    box-sizing: border-box;
+    z-index: 999;
+  }
+  .search-bar button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    
+  }
+  .search-bar input {
+    width: 500px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    box-sizing: border-box;
+  }
+  
+  /* Style the footer */
+  footer {
+  
+    color: #333;
+    padding: 5px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 30px;
+  }
+  
+  footer:hover {
+    
+    color: #0b0a0a;
+  }

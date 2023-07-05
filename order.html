@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Order Details </title>
+ <link rel="icon" href="sv.jpg" type="image/x-icon">
+<link rel="stylesheet" href="order.css">
+
+</head>
+<body>
+<div class="container">
+<h1>Order Details</h1> <br>
+                         
+<form action="send_mail.php" method="post" class="order-form">
+                                <h1 id="product-name"></h1>   <br>
+                                <img id="product-image" src="" alt="">
+                                <br>
+                                <br>
+                                <p id="product-price"></p>
+                                <br>
+<div class="row">
+<label for="name_input">Name</label>
+<input type="text" name="name" id="name_input" title="Enter your name" placeholder="Enter your name">
+</div>
+<div class="row">
+<label for="email_input">Email</label>
+<input type="email" name="email" id="email_input" title="Enter your email" placeholder="Enter your email">
+</div>
+<div class="row">
+<label for="address_input">Address</label>
+<input type="text" name="address" id="address_input" title="Enter your address" placeholder="Enter your address">
+</div>
+<div class="row">
+<label for="city_input">City</label>
+<input type="text" name="city" id="city_input" title="Enter your city" placeholder="Enter your city">
+</div>
+<div class="row">
+<label for="state_input">State</label>
+<input type="text" name="state" id="state_input" title="Enter your state" placeholder="Enter your state">
+</div>
+<div class="row">
+<label for="zipcode_input">Zipcode</label>
+<input type="text" name="zipcode" id="zipcode_input" title="Enter your zipcode" placeholder="Enter your zipcode">
+</div>
+<div class="form-row">
+                        <label for="payment_mode">Payment Mode</label>
+                                <select name="payment_mode" id="payment_mode" title="Select your payment mode">
+                                <option value="online">Online Payment</option>
+                                <option value="cod">Pay on Delivery</option>
+                                </select>
+                        </div>
+                        <div class="form-row">
+                        <input type="submit" name="submit" value="Pay">
+                        </div>
+                </form>
+                <img id="thanks-image" src="thanks.jpg" alt="Thanks for shopping " style="display: none;">
+                <img id="qr-code" src="qr-code.png" alt="Thanks for shopping" style="display: none;">  
+                <div id="thanks-message" style="display: none;">
+                <h2>Thank you for shopping with us!</h2>
+                <h2>Your order will be delivered soon.</h2>`
+                        </div>      
+        </div>
+<script src="order.js"></script>       
+</body>
+</html>

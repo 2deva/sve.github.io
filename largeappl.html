@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Large Appliances</title>
+    <link rel="icon" href="sv.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="appliance.css">
+  </head>
+  <body>
+    <header>
+      <a href="index.html">
+        <img src="sv.jpg" alt="Image description" style="width: 90px !important; height: 65px !important;">
+      </a>
+      <h1>Large Appliances</h1>
+      <label for="category">Select a category:</label>
+      <select id="category">
+        <option value="all">All</option>
+        <option value="refrigerators">Refrigerators</option>
+        <option value="washingmachines">Washing Machines</option>
+        <option value="Television">Television</option>
+      </select>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="index.html"><i class="fas fa-home fa-fw fa-lg fa-circle"></i> Home</a></li>
+        <li><a href="kitapp.html"><i class="fas fa-utensils fa-fw fa-lg fa-circle"></i> Kitchen Appliances</a></li>
+        <li><a href="mobile.html"><i class="fas fa-mobile fa-fw fa-lg fa-circle"></i> Mobiles </a></li>
+        <li><a href="" onclick="showProducts()"><i class="fas fa-shopping-cart fa-fw fa-lg fa-circle"></i> cart </a></li>
+      </ul>
+    </nav>
+    <main>
+
+  <section class="refrigerators">
+  <img src="rf1.jpg" alt="LG (ASDF 3889)">
+  <h3>LG ASDF2348</h3>
+  <p>₹16,990</p>
+  <div>
+    <button id="add-to-cart" type="button">Add to Cart</button>
+    <button type="button" class="buy-now" onclick="redirectToOrderPage('LG', 'rf1.jpg', '16,990')">Buy Now</button>
+ </div>
+</section>
+
+<section class="refrigerators">
+  <img src="rf2.jpg" alt="Samsung">
+  <h3>Samsung</h3>
+  <p>₹17,199.99</p>
+  <div>
+    <button id="add-to-cart" type="button">Add to Cart</button>
+    <button type="button" class="buy-now" onclick="redirectToOrderPage('Samsung', 'rf2.jpg', '17,199')">Buy Now</button>
+ </div>
+</section>
+
+<section class="refrigerators">
+  <img src="rf3.jpg" alt="Whirlpool">
+  <h3>Whirlpool</h3>
+  <p>₹15,199.99</p>
+  <div>
+    <button id="add-to-cart" type="button">Add to Cart</button>
+    <button type="button" class="buy-now" onclick="redirectToOrderPage('Whirlpool', 'rf3.jpg', '15,199')">Buy Now</button>
+ </div>
+</section>
+
+<section class="washingmachines">
+  <img src="wm1.jpg" alt="Washing Machine 1">
+  <h3>Whirlpool Semi auto (7kg)</h3>
+  <p>₹14,099.99</p>
+  <div>
+    <button id="add-to-cart" type="button">Add to Cart</button>
+    <button type="button" class="buy-now" onclick="redirectToOrderPage('Whirlpool semi auto', 'wm1.jpg', '14,199')">Buy Now</button>
+ </div>
+</section>
+
+<section class="washingmachines">
+  <img src="wm2.jpg" alt="Washing Machine 2">
+  <h3>LG topload (8kg)</h3>
+  <p>₹20,999.99</p>
+  <div>
+    <button id="add-to-cart" type="button">Add to Cart</button>
+    <button type="button" class="buy-now" onclick="redirectToOrderPage('LG topload', 'wm2.jpg', '20,999')">Buy Now</button>
+ </div>
+</section>
+
+<section class="washingmachines">
+  <img src="wm3.jpg" alt="Washing Machine 2">
+  <h3>LG Front load (6kg)</h3>
+  <p>₹28,899.99</p>
+  <div>
+    <button id="add-to-cart" type="button">Add to Cart</button>
+    <button type="button" class="buy-now" onclick="redirectToOrderPage('LG Front Load (6kg)', 'wm3.jpg', '28,899')">Buy Now</button>
+ </div>
+</section>
+
+<section class="Television">
+  <img src="tv1.jpg" alt="TV">
+  <h3>Sony Bravia</h3>
+  <p>₹54,999.99</p>
+  <div>
+    <button id="add-to-cart" type="button">Add to Cart</button>
+    <button type="button" class="buy-now" onclick="redirectToOrderPage('Sony', 'tv1.jpg', '54,9999')">Buy Now</button>
+ </div>
+</section>
+
+<section class="Television">
+  <img src="tv2.jpg" alt="TV2">
+  <h3>LG HD Smart</h3>
+  <p>₹45,999.99</p>
+  <div>
+    <button id="add-to-cart" type="button">Add to Cart</button>
+    <button type="button" class="buy-now" onclick="redirectToOrderPage('LG WM4565', 'tv2.jpg', '45,999')">Buy Now</button>
+ </div>
+</section>
+
+      <section class="Television">
+        <img src="tv3.jpg" alt="tv2">
+        <h3>Samsung OLED</h3>
+        <p>₹59,999.99</p>
+        <div>
+            <button type="button" class="buy-now" onclick="redirectToOrderPage('Samsung', 'tv3.jpg', '59,999')">Buy Now</button> 
+            <button type="button" id="add-to-cart">Add to Cart</button>
+     </div>
+      </section>
+      
+    </main>
+    <script
+    src="script.js"></script>
+  </body>
+</html>

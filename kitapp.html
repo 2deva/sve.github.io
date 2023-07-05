@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kitchen Appliances</title>
+    <link rel="icon" href="sv.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="appliance.css">
+  </head>
+  <body>
+
+    <header>
+      <a href="index.html">
+        <img src="sv.jpg" alt="Image description" style="width: 90px !important; height: 65px !important;">
+      </a>
+      <h1>Kitchen Appliances</h1>
+      <label for="category">Select a category:</label>
+      <select id="category">
+        <option value="all">All</option>
+        <option value="Mixer">Mixer</option>
+        <option value="Dishwasher">Dishwasher</option>
+        <option value="Stove">Stove</option>
+        <option value="Ricecooker">Ricecooker</option>
+        <option value="Dining">Dining</option>
+      </select>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="index.html"><i class="fas fa-home fa-fw fa-lg fa-circle"></i> Home</a></li>
+        <li><a href="largeappl.html" onclick="showProducts()"><i class="fas fa-tv fa-fw fa-lg fa-circle"></i> Large Appliances </a></li>
+        <li><a href="mobile.html" onclick="showProducts()"><i class="fas fa-mobile fa-fw fa-lg fa-circle"></i> Mobiles </a></li>
+        <li><a href="" onclick="showProducts()"><i class="fas fa-shopping-cart fa-fw fa-lg fa-circle"></i> cart </a></li>
+      </ul>
+    </nav>
+    <main>
+
+      <section class="Mixer">
+        <img src="mx1.jpg" alt="LG (ASDF 3889)">
+        <h3>ButterFly mixer</h3>
+        <script></script>
+        <p>₹6,990</p><br>
+        <div>
+          <button id="add-to-cart" type="button">Add to Cart</button>
+          <button type="button" class="buy-now" onclick="redirectToOrderPage('ButterFly mixer', 'mx1.jpg', '6,990')">Buy Now</button>
+       </div>
+      </section>
+
+      <section class="Mixer">
+        <img src="mx2.jpg" alt="ButterFly Fruit mixer">
+        <h3>ButterFly Fruit mixer</h3>
+        <p>₹7,990</p>
+        <div>
+          <button id="add-to-cart" type="button">Add to Cart</button>
+          <button type="button" class="buy-now" onclick="redirectToOrderPage('ButterFly Fruit mixer', 'mx2.jpg', '7,990')">Buy Now</button>
+        </div>
+      </section>
+
+      <section class="Mixer">
+        <img src="mx3.jpg" alt="ButterFly ">
+        <h3>ButterFly Grinder</h3>
+        <p>₹4,990</p>
+        <div>
+          <button id="add-to-cart" type="button">Add to Cart</button>
+          <button type="button" class="buy-now" onclick="redirectToOrderPage('ButterFly Grinder', 'mx3.jpg', '4,990')">Buy Now</button>
+        </div>
+      </section>
+
+      <section class="Stove">
+        <img src="s2.jpg" alt="Whirlpool">
+        <h3>prestige Stove</h3>
+        <p>₹5,990</p>
+        <div>
+          <button id="add-to-cart" type="button">Add to Cart</button>
+          <button type="button" class="buy-now" onclick="redirectToOrderPage('prestige stove ', 's2.jpg', '25,990')">Buy Now</button>
+        </div>
+      </section>
+      
+      <section class="Stove">
+        <img src="s1.jpg" alt="LG (ASDF 3889)">
+        <h3>Butterfly Stove</h3>
+        <p>₹9,990</p>
+        <div>
+          <button id="add-to-cart" type="button">Add to Cart</button>
+          <button type="button" class="buy-now" onclick="redirectToOrderPage('Butterfly Stove', 'st2.jpg', '29,990')">Buy Now</button>
+        </div>
+      </section>
+
+      <section class="Dining">
+        <img src="d.jpg" alt="Dining Table">
+        <h3>Dining Table</h3>
+        <p>₹15,990</p>
+        <div>
+          <button id="add-to-cart" type="button">Add to Cart</button>
+          <button type="button" class="buy-now" onclick="redirectToOrderPage('Dining Table', 'd.jpg', '15,990')">Buy Now</button>
+        </div>
+      </section>
+
+      <section class="Ricecooker">
+        <img src="rc1.jpg" alt="TV2">
+        <h3>Usha</h3>
+        <p>₹5,999.99</p><br>
+        <div>
+          <button id="add-to-cart" type="button">Add to Cart</button>
+          <button type="button" class="buy-now" onclick="redirectToOrderPage('Rice Cooker', 'rc1.jpg', '5,990')">Buy Now</button>
+        </div>
+
+      </section>
+      <section class="Ricecooker">
+        <img src="rc2.jpg" alt="TV2">
+        <h3>Panasonic</h3>
+        <p>₹5,999.99</p><br>   <div>
+          <button id="add-to-cart" type="button">Add to Cart</button>
+          <button type="button" class="buy-now" onclick="redirectToOrderPage('Rice Cooker', 'rc2.jpg', '5,990')">Buy Now</button>
+        </div>
+      </section>
+
+        <section class="Dishwasher">
+          <img src="dw.jpg" alt="Samsung">
+          <h3>Samsung Dishwasher</h3>
+          <p>₹49,990</p>
+          <div>
+            <button id="add-to-cart" type="button">Add to Cart</button>
+            <button type="button" class="buy-now" onclick="redirectToOrderPage('Samsung Dishwasher', 'dw.jpg', '49,990')">Buy Now</button>
+          </div>
+        </section>
+      
+    </main>
+    <script
+    src="script.js"></script>
+  </body>
+</html>
