@@ -1,3 +1,15 @@
+  /* Add CSS styles for small screens */
+  @media only screen and (max-width: 600px) {
+    .brand h1 img {
+      width: 50px;
+    }
+    .search-bar {
+      display: block;
+    }
+    .search-icon {
+      display: none;
+    }
+  }
 /* Set default font family and size */
 body {
   font-family: 'Neue Haas Grotesk', sans-serif;
