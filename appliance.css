@@ -1,45 +1,36 @@
-      /* Add CSS styles for small screens */
-      @media only screen and (max-width: 600px) {
-        .brand h1 img {
-          width: 50px;
-        }
-        .search-bar {
-          display: block;
-        }
-        .search-icon {
-          display: none;
-        }
-      }
-    /* Add styles for the header */
-      header {
-        background-color: azure;
-        color: rgb(78, 80, 81);
-        padding: 10px;
-        text-align: center;
-        background-size: 75px;
-        background-repeat: no-repeat;
-        background-position: center;
-        padding: 10px;   
-        font-family: 'Neue Haas Grotesk', sans-serif;
-            }
-            label[for="category"] {
-              font-family: 'Neue Haas Grotesk', sans-serif;
-              font-size: 18px;
-              color: #333;
-              padding: 3px;
-              border-radius: 5px;
-            }
-            
-            option[value="all"] {
-              font-family: 'Neue Haas Grotesk', sans-serif;
-              font-size: 18px;
-              color: #333;
-              background-color: #fff;
-            }
-      img {
-        border-radius: 10px;
-      }
-      nav {
+  /* Add styles for the header */
+  header {
+    background-color: azure;
+    color: rgb(78, 80, 81);
+    padding: 10px;
+    text-align: center;
+    background-size: 75px;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 10px;
+    font-family: 'Neue Haas Grotesk', sans-serif;
+  }
+
+  label[for="category"] {
+    font-family: 'Neue Haas Grotesk', sans-serif;
+    font-size: 18px;
+    color: #333;
+    padding: 3px;
+    border-radius: 5px;
+  }
+
+  option[value="all"] {
+    font-family: 'Neue Haas Grotesk', sans-serif;
+    font-size: 18px;
+    color: #333;
+    background-color: #fff;
+  }
+
+  img {
+    border-radius: 10px;
+  }
+
+  nav {
     background-color: #333;
     color: azure;
     padding: 10px;
@@ -69,106 +60,191 @@
   a:hover {
     color: #ffffff;
   }
-  
+
   .fa-home,
-    .fa-shopping-cart {
-      margin-right: 5px;
+  .fa-shopping-cart {
+    margin-right: 5px;
+  }
+
+  /* Add styles for the main section */
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #ffffff;
+    padding: 5px;
+    background-image: url('bi.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  /* Add styles for the sections */
+  section {
+    margin: 20px;
+    padding: 30px;
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px #7baec8;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.5s ease-in-out;
+    background-color: #e5e5e5;
+  }
+
+  /* Add styles for the images */
+  img {
+    width: 275px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px #90cbe6;
+    transition: all 0.5s ease-in-out;
+    background-color: #ffffff;
+  }
+
+  /* Add hover styles for the sections and images */
+  section:hover,
+  img:hover {
+    transform: scale(1.1);
+    box-shadow: 10px 10px 20px #f7f2f2;
+  }
+
+  /* Add styles for the headings */
+  h2,
+  h3 {
+    font-family: 'Neue Haas Grotesk', sans-serif;
+    text-align: center;
+    margin: 10px;
+  }
+
+  /* Add styles for the prices */
+  p {
+    font-family: 'Neue Haas Grotesk', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin: 10px;
+  }
+
+  button#add-to-cart {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  button#add-to-cart:hover {
+    background-color: #3e8e41;
+  }
+
+  .buy-now {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  .buy-now:hover {
+    background-color: #3e8e41;  }
+
+
+  /* Media queries for responsive design */
+  @media only screen and (max-width: 768px) {
+    /* Add styles for the main section */
+    main {
+      padding: 0;
     }
-      /* Add styles for the main section */
-      main {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        background-color: #ffffff;
-        padding: 5px;
-        background-image: url('bi.jpg');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-      }
 
-      /* Add styles for the sections */
-      section {
-        margin: 20px;
-        padding: 30px;
-        border: 1px solid #ffffff;
-        border-radius: 10px;
-        box-shadow: 5px 5px 10px #7baec8;
-        width: 300px;
-        height: 400px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        transition: all 0.5s ease-in-out;
-        background-color: #e5e5e5;
-      }
-      
-      /* Add styles for the images */
-      img {
-        width: 275px;
-        height: 350px;
-        object-fit: cover;
-        border-radius: 20px;
-        box-shadow: 2px 2px 5px #90cbe6;
-        transition: all 0.5s ease-in-out;
-        background-color: #ffffff;
-      }
+    /* Add styles for the sections */
+    section {
+      margin: 10px;
+      padding: 20px;
+      width: 250px;
+      height: 350px;
+    }
 
-      /* Add hover styles for the sections and images */
-      section:hover, img:hover {
-        transform: scale(1.1);
-        box-shadow: 10px 10px 20px #f7f2f2;
-      }
+    /* Add styles for the images */
+    img {
+      width: 225px;
+      height: 300px;
+    }
 
-      /* Add styles for the headings */
-      h2, h3 {
-        font-family: 'Neue Haas Grotesk', sans-serif;
-        text-align: center;
-        margin: 10px;
-      }
+    /* Add styles for the headings */
+    h2,
+    h3 {
+      font-size: 20px;
+    }
 
-      /* Add styles for the prices */
-      p {
-        font-family: 'Neue Haas Grotesk', sans-serif;
-        font-size: 24px;
-        font-weight: bold;
-        color: #333;
-        margin: 10px;
-      }
+    /* Add styles for the prices */
+    p {
+      font-size: 20px;
+    }
 
-      button#add-to-cart {
-        background-color: #4CAF50;
-        border: none;
-        color: white;
-        padding: 10px 20px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        margin-left: 10px;
-        cursor: pointer;
-        border-radius: 5px;
-      }
-      
-      button#add-to-cart:hover {
-        background-color: #3e8e41;
-      }
+    button#add-to-cart,
+    .buy-now {
+      font-size: 14px;
+      padding: 8px 16px;
+    }
+  }
 
-      .buy-now {
-        background-color: #4CAF50;
-        border: none;
-        color: white;
-        padding: 10px 20px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        margin-left: 10px;
-        cursor: pointer;
-        border-radius: 5px;
-      }
-      
-      .buy-now :hover {
-        background-color: #3e8e41;
-      }
+  @media only screen and (max-width: 576px) {
+    /* Add styles for the sections */
+    section {
+      margin: 10px;
+      padding: 20px;
+      width: 200px;
+      height: 300px;
+    }
+
+    /* Add styles for the images */
+    img {
+      width: 175px;
+      height: 250px;
+    }
+
+    /* Add styles for the headings */
+    h2,
+    h3 {
+      font-size: 18px;
+    }
+
+    /* Add styles for the prices */
+    p {
+      font-size: 18px;
+    }
+
+    button#add-to-cart,
+    .buy-now {
+      font-size: 12px;
+      padding: 6px 12px;
+    }
+    li {
+      margin-left: 3px;
+    }
+    nav {
+      background-color: #333;
+      color: azure;
+      padding: 4px;
+      font-family: 'Neue Haas Grotesk', sans-serif;
+    }
+  
+  }
