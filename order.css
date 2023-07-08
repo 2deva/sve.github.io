@@ -1,86 +1,139 @@
-  /* Add CSS styles for small screens */
-  @media only screen and (max-width: 600px) {
-    .brand h1 img {
-      width: 50px;
-    }
-    .search-bar {
-      display: block;
-    }
-    .search-icon {
-      display: none;
-    }
+/* Add CSS styles for small screens */
+@media only screen and (max-width: 600px) {
+  .brand h1 img {
+    width: 50px;
   }
-  
-body {
-    font-family: 'Neue Haas Grotesk', sans-serif;
-    font-size: 16px;
-    background-image: url('bi2.jpg');
-    background-size: cover;
+  .search-bar {
+    display: block;
   }
-  .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  .search-icon {
+    display: none;
   }
+  #product-image {
+    height: auto;
+    max-width: 100%;
+  }
+  body {
+    font-size: 14px;
+  }
+  #product-image {
+    height: 250px;
+    width: 300px;
+  }
+  form {
+    width: 90%;
+  }
+}
 
-      #product-image {
-    border: 5px solid #3c6a7f;
-    margin-top: 20px;
+/* Add CSS styles for medium screens */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  .brand h1 img {
+    width: 100px;
+  }
+  #product-image {
+    height: auto;
+    max-width: 100%;
+  }
+  body {
+    font-size: 16px;
+  }
+  #product-image {
+    height: 300px;
+    width: 350px;
+  }
+  form {
+    width: 70%;
+  }
+}
+
+/* Add CSS styles for large screens */
+@media only screen and (min-width: 1025px) {
+  .brand h1 img {
+    width: 150px;
+  }
+  #product-image {
+    height: auto;
+    max-width: 100%;
+  }
+  body {
+    font-size: 18px;
+  }
+  #product-image {
     height: 350px;
     width: 400px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-
   }
-  
-  #product-name {
-    font-size: 25px;
-    margin: 0;
-    color: #333;
-  }
-  
-  #product-price {
-    font-size: 18px;
-    font-weight: bold;
-    margin: 0;
-    color: #666;
-  }
-  h1 {
-    text-align: center;
-    margin-top: 20px;
-    color: #333;
-  }
-  
   form {
-    align-items: right;
-    width: 500px;
-    background-color: #f0f0f0;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    padding: 20px;
+    width: 50%;
   }
-  
-  input,
-  select {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  input[type="submit"] {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.2s ease-in-out;
-  }
-  
-  input[type="submit"]:hover {
-    background-color: #555;
-  }
+}
+
+body {
+  font-family: 'Neue Haas Grotesk', sans-serif;
+  background-image: url('bi.jpg');
+  background-size: cover;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#product-image {
+  border: 5px solid #3c6a7f;
+  margin-top: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#product-name {
+  font-size: 25px;
+  margin: 0;
+  color: #333;
+}
+
+#product-price {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+  color: #666;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 20px;
+  color: #333;
+}
+
+form {
+  align-items: right;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+input[type="submit"] {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+input[type="submit"]:hover {
+  background-color: #555;
+}
   
