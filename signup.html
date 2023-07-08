@@ -1,0 +1,190 @@
+<?php include 'signup.php'; ?>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="sv.jpg" type="image/x-icon">
+    <title>S V (signup)</title>
+    <title></title>
+  </head>
+  <body>
+    <img src="sv.jpg" alt="Brand Logo" class="brand-logo">
+    <!-- Add the container div -->
+    <div class="container">
+        
+      <form method="POST" action="signup.php" id="signup-form">
+            <h1>Signup</h1>
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" required>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required>
+          <button type="submit">Signup</button>
+        </form>
+        <p>Already have an account? <a href="login.html">Login here</a>.</p>
+        <div id="error"></div>
+      </div>
+
+
+    <script>
+      // Handle the form submission
+      document.querySelector('form').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        // Retrieve the user data from the form
+        var username = document.getElementById('username').value;
+        var email = document.getElementById('email').value;
+        var password = document.getElementById('password').value;
+
+        // Send the user data to the server
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', 'signup.php', true);
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        xhr.onreadystatechange = function() {
+          if (xhr.readyState === XMLHttpRequest.DONE) {
+            if (xhr.status === 200) {
+              // Check if the signup was successful
+              if (xhr.responseText === 'success') {
+                // Redirect to the index page
+                window.location.href = 'index.html';
+              } else {
+                // Display an error message
+                document.getElementById('error').innerHTML = xhr.responseText;
+              }
+            } else {
+              // Display an error message
+              document.getElementById('error').innerHTML = 'Error: ' + xhr.status + ' ' + xhr.statusText;
+            }
+          }
+        };
+        xhr.open('POST', 'signup.php?username=' + encodeURIComponent(username) + '&email=' + encodeURIComponent(email) + '&password=' + encodeURIComponent(password), true);
+        console.log('Sending user data to server...');
+        console.log('Request details: ');
+        console.log('Username: ' + username);
+        console.log('Email: ' + email);
+        console.log('Password: ' + password);
+        console.log('Request URL: ' + xhr.responseURL);
+        xhr.send();
+      });
+      document.querySelector('#signup-form').addEventListener('submit', function(event) {
+  // Prevent the form from submitting
+  event.preventDefault();
+
+  // Validate the form data
+  if (validateForm()) {
+    // If the form data is valid, submit the form
+    this.submit();
+  }
+});
+
+
+function validateForm() {
+  // Get the form data
+  var username = document.getElementById('username').value;
+  var email = document.getElementById('email').value;
+  var password = document.getElementById('password').value;
+
+  // Validate the form data
+  if (username.length < 3) {
+    alert('Username must be at least 3 characters long');
+    return false;
+  }
+
+  if (!email.includes('@')) {
+    alert('Invalid email address');
+    return false;
+  }
+
+  if (password.length < 3) {
+    alert('Password must be at least 6 characters long');
+    return false;
+  }
+
+  // If the form data is valid, return true
+  return true;
+}
+    </script>
+
+
+<style>
+      /* Add the container class */
+      .container {
+        display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+      }
+    body {
+      font-family: 'Neue Haas Grotesk', sans-serif;
+      background-image: url('bi.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+    /* Add this CSS code */
+    .brand-logo {
+      display: block;
+      margin: 0 auto;
+      width: 100px;
+      height: auto;
+      background-image: url('sv.jpg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      border-radius: 10%;
+    }
+    h1 {
+      text-align: center;
+      margin-top: 50px;
+    }
+    form {
+      width: 400px;
+      height: auto;
+      margin: 0 auto;
+      background-color: #e4e2e2;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      width: 90%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: none;
+      border-radius: 5px;
+      box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    }
+    button[type="submit"] {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button[type="submit"]:hover {
+      background-color: #3e8e41;
+    }
+    p {
+      text-align: center;
+      margin-top: 20px;
+    }
+    a {
+      color: #4CAF50;
+    }
+    #error {
+      color: red;
+      margin-top: 10px;
+      text-align: center;
+    }
+  </style>
+  </body>
+</html>
